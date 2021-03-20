@@ -32,4 +32,4 @@ if __name__ == "__main__":
   attachment = '/tmp/processed.pdf'
   message = emails.generate_email(sender, receiver, subject, body, report_path)
   
-  email.send(message)
+  emails.send(message)
