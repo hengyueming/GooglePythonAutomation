@@ -14,7 +14,7 @@ def get_data(files):
   for file in files:
     if file.endswith('.txt'):
       with open(path + file, 'r') as f:
-        line = f.readline()
+        line = f.readlines()
         name = line[0].strip()
         weight = line[1].strip()
         data += 'name: ' + name + '<br/>' + 'weight: ' + weight + '<br/><br/>'
@@ -22,7 +22,7 @@ def get_data(files):
 
 if __name__ == "__main__":
   table_data = get_data(files)
-  report_path = '/tmp/porcessed.pdf'
+  report_path = '/tmp/processed.pdf'
   reports.generate_report(report_path, 'Processed Update on ' + date, table_data)
   
   sender = "automation@example.com"
