@@ -17,7 +17,7 @@ def get_data(files):
         line = f.readline()
         name = line[0].strip()
         weight = line[1].strip()
-        data += 'name: ' + name + '</br>' + 'weight: ' + weight = '</br></br>'
+        data += 'name: ' + name + '<br/>' + 'weight: ' + weight + '<br/><br/>'
   return data
 
 if __name__ == "__main__":
